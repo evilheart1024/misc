@@ -1,5 +1,6 @@
 proxies:
     - { name: 🇸🇬新加坡-直连C, type: vmess, server: sg2.q5wrff7jtkdg23.top, port: 8443, uuid: fd7acbb1-a19c-4014-b1b5-6f40748f6a77, alterId: 0, cipher: auto, udp: true, tls: true, servername: sg2.q5wrff7jtkdg23.top, network: ws, ws-opts: { path: /sg2, headers: { Host: sg2.q5wrff7jtkdg23.top } }, ws-path: /sg2, ws-headers: { Host: sg2.q5wrff7jtkdg23.top } }
+proxy-groups:
     - { name: 青花瓷云qhcy.cc, type: select, proxies: [自动选择, 🇸🇬新加坡-直连C] }
     - { name: 自动选择, type: url-test, proxies: [🇸🇬新加坡-直连C], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
    
