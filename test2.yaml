@@ -1,9 +1,10 @@
 proxies:
     - { name: 🇸🇬新加坡-直连C, type: vmess, server: sg2.q5wrff7jtkdg23.top, port: 8443, uuid: fd7acbb1-a19c-4014-b1b5-6f40748f6a77, alterId: 0, cipher: auto, udp: true, tls: true, servername: sg2.q5wrff7jtkdg23.top, network: ws, ws-opts: { path: /sg2, headers: { Host: sg2.q5wrff7jtkdg23.top } }, ws-path: /sg2, ws-headers: { Host: sg2.q5wrff7jtkdg23.top } }
     - { name: 🇸🇬新加坡-直连hys, type: hysteria, server: sg.q5wrff7jtkdg23.top, port: 7009, auth_str: fd7acbb1-a19c-4014-b1b5-6f40748f6a77, up: 1000, down: 1000, obfs: ZmU3ZGM5MzBiODk0Y2NlNg==, skip-cert-verify: true, disable_mtu_discovery: 1, protocol: udp, fast-open: true, ports: 6000-36000 } 
+    - { name: 🇭🇰香港-直连B, type: vmess, server: hk-v35.q5wrff7jtkdg23.top, port: 8443, uuid: fd7acbb1-a19c-4014-b1b5-6f40748f6a77, alterId: 0, cipher: auto, udp: true, tls: true, servername: hk-v35.q5wrff7jtkdg23.top, network: ws, ws-opts: { path: /hkv35, headers: { Host: hk-v35.q5wrff7jtkdg23.top } }, ws-path: /hkv35, ws-headers: { Host: hk-v35.q5wrff7jtkdg23.top } }
 proxy-groups:
-    - { name: 青花瓷云qhcy.cc, type: select, proxies: [自动选择, 🇸🇬新加坡-直连C, 🇸🇬新加坡-直连hys] }
-    - { name: 自动选择, type: url-test, proxies: [🇸🇬新加坡-直连C, 🇸🇬新加坡-直连hys], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
+    - { name: 青花瓷云qhcy.cc, type: select, proxies: [自动选择, 🇸🇬新加坡-直连C, 🇸🇬新加坡-直连hys, 🇭🇰香港-直连B] }
+    - { name: 自动选择, type: url-test, proxies: [🇸🇬新加坡-直连C, 🇸🇬新加坡-直连hys, 🇭🇰香港-直连B], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
    
 rules:
     - 'DOMAIN-SUFFIX,services.googleapis.cn,青花瓷云qhcy.cc'
